@@ -5,8 +5,8 @@
   "scripts": {
     "reset": "nx reset",
     "serve": "npx nx serve frontend",
-    "build": "npx nx build fronted --skip-nx-cache",
-    "build:production": "npx nx build fronted --skip-nx-cache --configuration=production",
+    "build": "npx nx build frontend --skip-nx-cache",
+    "build:production": "npx nx build frontend --skip-nx-cache --configuration=production",
     "regenerate": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "private": true,
