@@ -1,0 +1,51 @@
+:root {
+  --heading-text-light: #333333; /* Dark text for light mode */
+  --heading-text-dark: #f0f0f0; /* Light text for dark mode */
+  --heading-margin: 0 0 16px; /* Default bottom margin */
+}
+
+[data-theme='dark'] {
+  --heading-text: var(--heading-text-dark);
+}
+
+[data-theme='light'] {
+  --heading-text: var(--heading-text-light);
+}
+
+/* Base Styles for Heading */
+.dynamic-heading {
+  color: var(--heading-text);
+  margin: var(--heading-margin);
+  transition: color 0.3s ease;
+}
+
+/* Specific Levels */
+.dynamic-heading.h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.dynamic-heading.h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.dynamic-heading.h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.dynamic-heading.h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.dynamic-heading.h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.dynamic-heading.h6 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}

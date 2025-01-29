@@ -1,0 +1,29 @@
+:root {
+  --layout-bg: #f5f5f5; /* Default light background */
+  --layout-bg-dark: #1e1e1e; /* Dark background for dark mode */
+  --layout-padding: 16px; /* Default padding */
+  --layout-gap: 16px; /* Default gap */
+}
+
+[data-theme='dark'] {
+  --layout-bg: var(--layout-bg-dark);
+}
+
+.dynamic-layout {
+  width: 100%;
+  height: auto; /* Adjust height based on children */
+  box-sizing: border-box; /* Include padding and border in dimensions */
+  background-color: var(--layout-bg); /* Match the background to the theme */
+  background-clip: padding-box; /* Extend background into the padding area */
+  padding: var(--layout-padding); /* Apply padding */
+  gap: var(--layout-gap); /* Default spacing between children */
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  display: flex; /* Flex container */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --layout-gap: 8px; /* Reduce gap for smaller screens */
+  }
+}

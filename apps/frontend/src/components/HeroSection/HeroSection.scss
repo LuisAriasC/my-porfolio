@@ -1,0 +1,96 @@
+@import '../../styles.scss';
+
+:root {
+  --hero-name-font-size: 4rem; /* Font size for the name */
+  --hero-subtitle-font-size: 1.75rem; /* Font size for the subtitle */
+  --hero-padding: 220px; /* Margin on the sides */
+}
+
+[data-theme='dark'] {
+  --hero-bg: #{$global-bg-dark};
+  --hero-text: #{$global-text-dark};
+}
+
+[data-theme='light'] {
+  --hero-bg: #{$global-bg-light};
+  --hero-text: #{$global-text-light};
+}
+
+
+
+/* Canvas for the particle effect */
+.hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Restrict width to the viewport width */
+  height: 100vh; /* Restrict height to the viewport height */
+  overflow: hidden;
+  z-index: 1; /* Place behind content */
+  pointer-events: none; /* Allow mouse interaction with content */
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Take full screen width */
+  max-width: 100vw; /* Prevent horizontal overflow */
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 0 var(--hero-padding); /* Add padding for side margins */
+  background-color: var(--hero-bg); /* Dynamic background color */
+  color: var(--hero-text); /* Dynamic text color */
+  display: flex;
+  align-items: center; /* Center overall layout horizontally */
+  justify-content: center; /* Center overall layout vertically */
+  overflow: hidden; /* Prevent overflow of child elements */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Content in Hero Section */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Place content above canvas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent; /* Ensure the content has no background */
+}
+
+/* Name (Heading) */
+.hero-title {
+  font-size: var(--hero-name-font-size);
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-size: var(--hero-subtitle-font-size);
+  margin: 0;
+  opacity: 0.9; /* Slight transparency for elegance */
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --hero-padding: #{$laptop-padding}; /* Adjust padding for tablets */
+    --hero-name-font-size: 2.8rem; /* Adjust font size */
+    --hero-subtitle-font-size: 1.4rem; /* Adjust subtitle size */
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --hero-padding: #{$tablet-padding}; /* Adjust padding for smaller tablets */
+    --hero-name-font-size: 2.8rem; 
+    --hero-subtitle-font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --hero-padding: #{$mobile-padding}; /* Adjust padding for phones */
+    --hero-name-font-size: 2.5rem;
+    --hero-subtitle-font-size: 1.25rem;
+  }
+}

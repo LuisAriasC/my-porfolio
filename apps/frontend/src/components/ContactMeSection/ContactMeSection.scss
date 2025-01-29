@@ -1,0 +1,116 @@
+@import '../../styles.scss';
+
+:root {
+  --contact-highlight: #{$primary};
+  --btn-bg: #{$primary};
+  --btn-text: #{$global-text-light};
+  --btn-hover-bg: #{primary-effect};
+  --section-title-size: #{$fullscreen-section-title-size};
+  --section-subtitle-size: #{$fullscreen-section-subtitle-size};
+}
+
+[data-theme='light'] {
+  --contact-bg: #{$global-bg-light};
+  --contact-text: #{$global-text-light};
+}
+
+[data-theme='dark'] {
+  --contact-bg: #{$global-bg-dark};
+  --contact-text: #{$global-text-dark};
+}
+
+.contact-me-section {
+  padding: 60px 20px;
+  background-color: var(--contact-bg);
+  color: var(--contact-text);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-me-title {
+  font-size: var(--section-title-size);
+  font-weight: bold;
+}
+
+.contact-me-subtitle {
+  font-size: var(--section-subtitle-size);
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: var(--section-subtitle-size);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: var(--section-subtitle-size);
+  border: 1px solid var(--contact-text);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--contact-text);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--contact-highlight);
+  outline: none;
+}
+
+.btn.submit-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.submit-btn:hover {
+  background-color: var(--btn-hover-bg);
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --section-title-size: #{$laptop-section-title-size};
+    --section-subtitle-size: #{$laptop-section-subtitle-size};
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-title-size: #{$tablet-section-title-size};
+    --section-subtitle-size: #{$tablet-section-subtitle-size};
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-title-size: #{$mobile-section-title-size};
+    --section-subtitle-size: #{$mobile-section-subtitle-size};
+  }
+}

@@ -1,0 +1,29 @@
+:root {
+  --paragraph-text-light: #555555; /* Softer dark text for light mode */
+  --paragraph-text-dark: #d0d0d0; /* Softer light text for dark mode */
+  --paragraph-margin: 0 0 16px; /* Default bottom margin */
+}
+
+[data-theme='dark'] {
+  --paragraph-text: var(--paragraph-text-dark);
+}
+
+[data-theme='light'] {
+  --paragraph-text: var(--paragraph-text-light);
+}
+
+/* Base Styles for Paragraph */
+.dynamic-paragraph {
+  color: var(--paragraph-text);
+  margin: var(--paragraph-margin);
+  line-height: 1.6;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dynamic-paragraph {
+    font-size: 0.9rem;
+  }
+}

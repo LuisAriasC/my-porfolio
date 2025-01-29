@@ -1,0 +1,163 @@
+@import '../../styles.scss';
+
+$fullscreen-topbar-gap: 10px;
+$laptop-topbar-gap: 10px;
+$tablet-topbar-gap: 8px;
+$mobile-topbar-gap: 8px;
+
+$fullscreen-topbar-padding: 10px 20px;
+$laptop-topbar-padding: 10px 20px;
+$tablet-topbar-padding: 8px 16px;
+$mobile-topbar-padding: 8px 16px;
+
+$fullscreen-topbar-border-radius: 40px;
+$laptop-topbar-border-radius: 40px;
+$tablet-topbar-border-radius: 32px;
+$mobile-topbar-border-radius: 32px;
+
+$fullscreen-topbar-icon-size: 60px;
+$laptop-topbar-icon-size: 50px;
+$tablet-topbar-icon-size: 40px;
+$mobile-topbar-icon-size: 30px;
+
+$fullscreen-topbar-icon-font-size: 1.5rem;
+$laptop-topbar-icon-font-size: 1.5rem;
+$tablet-topbar-icon-font-size: 1.5rem;
+$mobile-topbar-icon-font-size: 1.3rem;
+
+$fullscreen-topbar-icon-font-padding: 5px 10px;
+$laptop-topbar-icon-font-padding: 5px 10px;
+$tablet-topbar-icon-font-padding: 4px 8px;
+$mobile-topbar-icon-font-padding: 4px 8px;
+
+$fullscreen-topbar-icon-label-radius: 5px;
+$laptop-topbar-icon-label-radius: 5px;
+$tablet-topbar-icon-label-radius: 4px;
+$mobile-topbar-icon-label-radius: 4px;
+
+:root {
+  --topbar-padding: #{$fullscreen-topbar-padding};
+  --topbar-border-radius: #{$fullscreen-topbar-border-radius};
+  --topbar-gap: #{$fullscreen-topbar-gap};
+  --topbar-icon-size: #{$fullscreen-topbar-icon-size};
+  --topbar-icon-font-size: #{$fullscreen-topbar-icon-font-size};
+  --topbar-icon-font-padding: #{$fullscreen-topbar-icon-font-padding};
+  --topbar-icon-label-radius: #{$fullscreen-topbar-icon-label-radius};
+}
+
+[data-theme='dark'] {
+  --topbar-bg: #{$global-bg-dark};
+  --topbar-text: #{$global-text-dark};
+  --topbar-hover-bg: #{$global-secondary-bg-dark};
+  --icon-label-bg: #{$global-secondary-bg-dark};
+}
+
+[data-theme='light'] {
+  --topbar-bg: #{$global-bg-light};
+  --topbar-text: #{$global-text-light};
+  --topbar-hover-bg: #{$global-secondary-bg-light};
+  --icon-label-bg: #{$global-secondary-bg-light};
+}
+
+.topbar {
+  position: fixed;
+  top: var(--topbar-gap);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--topbar-bg);
+  padding: var(--topbar-padding);
+  border-radius: var(--topbar-border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.topbar-menu {
+  display: flex;
+  gap: var(--topbar-gap);
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: var(--topbar-icon-size);
+  height: var(--topbar-icon-size);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-button .icon {
+  font-size: var(--topbar-icon-font-size);
+  color: var(--topbar-text);
+}
+
+.icon-button:hover {
+  background-color: var(--topbar-hover-bg);
+  transform: scale(1.1);
+}
+
+.icon-label {
+  display: none;
+  position: absolute;
+  top: var(--topbar-icon-size);
+  background-color: var(--icon-label-bg);
+  color: var(--topbar-text);
+  padding: var(--topbar-icon-font-padding);
+  border-radius: var(--topbar-icon-label-radius);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.icon-button:hover .icon-label {
+  display: block;
+}
+
+.toggle-theme {
+  font-size: var(--topbar-icon-font-size);
+  color: var(--topbar-text);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --topbar-padding: #{$laptop-topbar-padding};
+    --topbar-border-radius: #{$laptop-topbar-border-radius};
+    --topbar-gap: #{$laptop-topbar-gap};
+    --topbar-icon-size: #{$laptop-topbar-icon-size};
+    --topbar-icon-font-size: #{$laptop-topbar-icon-font-size};
+    --topbar-icon-font-padding: #{$laptop-topbar-icon-font-padding};
+    --topbar-icon-label-radius: #{$laptop-topbar-icon-label-radius};
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --topbar-padding: #{$tablet-topbar-padding};
+    --topbar-border-radius: #{$tablet-topbar-border-radius};
+    --topbar-gap: #{$tablet-topbar-gap};
+    --topbar-icon-size: #{$tablet-topbar-icon-size};
+    --topbar-icon-font-size: #{$tablet-topbar-icon-font-size};
+    --topbar-icon-font-padding: #{$tablet-topbar-icon-font-padding};
+    --topbar-icon-label-radius: #{$tablet-topbar-icon-label-radius};
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --topbar-padding: #{$mobile-topbar-padding};
+    --topbar-border-radius: #{$mobile-topbar-border-radius};
+    --topbar-gap: #{$mobile-topbar-gap};
+    --topbar-icon-size: #{$mobile-topbar-icon-size};
+    --topbar-icon-font-size: #{$mobile-topbar-icon-font-size};
+    --topbar-icon-font-padding: #{$mobile-topbar-icon-font-padding};
+    --topbar-icon-label-radius: #{$mobile-topbar-icon-label-radius};
+  }
+}

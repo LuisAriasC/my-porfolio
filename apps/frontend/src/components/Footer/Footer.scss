@@ -1,0 +1,95 @@
+@import '../../styles.scss';
+
+:root {
+  --footer-highlight: #{$primary};
+  --footer-link-hover: #{$primary-effect};
+  --footer-padding: #{$fullscreen-footer-padding};
+  --gap: #{$fullscreen-gap};
+  --footer-icon-size: #{$fullscreen-footer-icon-size};
+  --footer-text-size: #{$fullscreen-footer-text-size};
+}
+
+[data-theme='light'] {
+  --footer-bg: #{$global-bg-light};
+  --footer-text: #{$global-secondary-text-light};
+}
+
+[data-theme='dark'] {
+  --footer-bg: #{$global-bg-dark};
+  --footer-text: #{$global-secondary-text-dark};
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--footer-padding);
+  box-sizing: border-box;
+  width: 90vw;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.footer-left {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.footer-right {
+  flex: 2;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-icon {
+  width: var(--footer-icon-size);
+  height: var(--footer-icon-size);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.footer-text {
+  font-size: var(--footer-text-size);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --footer-padding: #{$laptop-footer-padding};
+    --gap: #{$laptop-gap};
+    --footer-icon-size: #{$laptop-footer-icon-size};
+    --footer-text-size: #{$laptop-footer-text-size};
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --footer-padding: #{$tablet-footer-padding};
+    --gap: #{$tablet-gap};
+    --footer-icon-size: #{$tablet-footer-icon-size};
+    --footer-text-size: #{$tablet-footer-text-size};
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --footer-padding: #{$mobile-footer-padding};
+    --gap: #{$mobile-gap};
+    --footer-icon-size: #{$mobile-footer-icon-size};
+    --footer-text-size: #{$mobile-footer-text-size};
+  }
+}

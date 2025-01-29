@@ -1,0 +1,6 @@
+**/node_modules
+node_modules
+nx
+docker-compose.env
+docker-compose.override.yml
+docker-bake.override.json
