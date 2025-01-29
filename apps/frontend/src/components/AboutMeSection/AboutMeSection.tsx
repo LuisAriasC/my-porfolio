@@ -7,8 +7,8 @@ const AboutMeSection: React.FC = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '../../../public/MyCV.pdf'; // Path to the PDF in the public folder
-    link.download = 'LuisAriasCV.pdf'; // Name for the downloaded file
+    link.href = '/MyCV.pdf';
+    link.download = 'LuisAriasCV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
