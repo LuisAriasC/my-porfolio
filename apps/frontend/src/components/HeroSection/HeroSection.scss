@@ -9,11 +9,13 @@
 [data-theme='dark'] {
   --hero-bg: #{$global-bg-dark};
   --hero-text: #{$global-text-dark};
+  --hero-secondary-text: #{$global-secondary-text-dark};
 }
 
 [data-theme='light'] {
   --hero-bg: #{$global-bg-light};
   --hero-text: #{$global-text-light};
+  --hero-secondary-text: #{$global-secondary-text-light};
 }
 
 
@@ -64,6 +66,11 @@
   margin: 0;
 }
 
+.hero-carousel {
+  font-size: 1rem;
+  color: var(--hero-secondary-text);
+  margin: 0;
+}
 /* Subtitle */
 .hero-subtitle {
   font-size: var(--hero-subtitle-font-size);

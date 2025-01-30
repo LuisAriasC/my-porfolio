@@ -17,8 +17,7 @@ const AboutMeSection: React.FC = () => {
     <section id='about' className="about-me-section">
       {/* Left Side: Image */}
       <div className="about-me-left">
-        <DynamicHeading level={1} className='about-me-title'>Hi, I’m Luis Arias!</DynamicHeading>
-        <DynamicParagraph className="about-me-tagline">Delivering excellence through passion and precision.</DynamicParagraph>
+        <DynamicHeading level={1} className='about-me-title'>About Me</DynamicHeading>
         <img
           src={Luis} 
           alt="Your Name"
