@@ -29,13 +29,13 @@ export const projects: Project[] = [
     description: 'I designed & builded the API with a Microservice architecture, implemented the back office project (Artemis) & helped with some features for the front office web app (Apolo).',
     image: <img src={DeltaProject} loading="lazy" alt="Apolo & Artemis" />,
     techStack: [
-      { name: 'NestJs', component: <img src={NestJSLogo} loading="lazy" alt="NestJS" className='tech-image'/> },
-      { name: 'Angular', component: <img src={AngularLogo} loading="lazy" alt="Angular" className='tech-image'/> },
-      { name: 'TypeScript', component: <img src={TypeScriptLogo} loading="lazy" alt="TypeScript" className='tech-image'/> },
-      { name: 'MongoDB', component: <img src={MongoDBLogo} loading="lazy" alt="MongoDB" className='tech-image'/> },
-      { name: 'GraphQL', component: <img src={GraphQLLogo} loading="lazy" alt="GraphQL" className='tech-image'/> },
-      { name: 'GCP', component: <img src={GCPLogo} loading="lazy" alt="GCP" className='tech-image'/> },
-      { name: 'Docker', component: <img src={DockerLogo} loading="lazy" alt="Docker" className='tech-image'/> },
+      // { name: 'NestJs', component: <img src={NestJSLogo} loading="lazy" alt="NestJS" className='tech-image'/> },
+      // { name: 'Angular', component: <img src={AngularLogo} loading="lazy" alt="Angular" className='tech-image'/> },
+      // { name: 'TypeScript', component: <img src={TypeScriptLogo} loading="lazy" alt="TypeScript" className='tech-image'/> },
+      // { name: 'MongoDB', component: <img src={MongoDBLogo} loading="lazy" alt="MongoDB" className='tech-image'/> },
+      // { name: 'GraphQL', component: <img src={GraphQLLogo} loading="lazy" alt="GraphQL" className='tech-image'/> },
+      // { name: 'GCP', component: <img src={GCPLogo} loading="lazy" alt="GCP" className='tech-image'/> },
+      // { name: 'Docker', component: <img src={DockerLogo} loading="lazy" alt="Docker" className='tech-image'/> },
     ]
   },
   {
