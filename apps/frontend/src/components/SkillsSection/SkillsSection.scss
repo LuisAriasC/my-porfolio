@@ -89,6 +89,11 @@
   margin: var(--card-title-margin) auto;
 }
 
+.skill-card-icon img{
+  width: var(--card-icon-size);
+  height: var(--card-icon-size);
+}
+
 /* Hover Effect */
 .skill-card:hover {
   transform: scale(var(--card-hover-scale));

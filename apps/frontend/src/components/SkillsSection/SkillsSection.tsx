@@ -1,6 +1,6 @@
 import React from 'react';
 import './SkillsSection.scss';
-import { DynamicHeading, DynamicLayout } from '@my-portfolio/react-components';
+import { DynamicParagraph, DynamicLayout } from '@my-portfolio/react-components';
 
 export interface Skill {
   name: string;
@@ -16,14 +16,14 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => {
   return (
     <div id='technologies'>
       <DynamicLayout direction="column" gap={20} className="skills-section">
-          <DynamicHeading level={2} className="skills-title">
+          <DynamicParagraph className="skills-title">
             My Skills
-          </DynamicHeading>
+          </DynamicParagraph>
         <DynamicLayout direction="row" wrap="wrap" gap={20} justifyContent="center" className="skills-list">
           {skills.map((skill, index) => (
-            <div className={`skill-card`}>
+            <div key={`skill-${index}`}className={`skill-card`}>
               <div className="skill-card-icon">{skill.icon}</div>
-              <DynamicHeading level={3} className='skill-card-title'>{skill.name}</DynamicHeading>
+              <DynamicParagraph className='skill-card-title'>{skill.name}</DynamicParagraph>
             </div>
           ))}
         </DynamicLayout>

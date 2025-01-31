@@ -62,7 +62,7 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 0px 10px 10px;
   font-size: var(--section-subtitle-size);
   border: 1px solid var(--contact-text);
   border-radius: 8px;
@@ -90,7 +90,6 @@
 }
 
 .btn.submit-btn:hover {
-  background-color: var(--btn-hover-bg);
   transform: scale(1.05);
 }
 

@@ -149,13 +149,12 @@
 }
 
 .resume-btn:hover {
-  background-color: var(--btn-hover-bg);
   transform: scale(1.05);
 }
 
 .contact-btn {
   background-color: transparent;
-  color: var(--about-highlight);
+  color: var(--btn-text);
   border: 2px solid var(--about-highlight);
 }
 

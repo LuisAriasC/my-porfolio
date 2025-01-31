@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutMeSection.scss';
-import Luis from '../../assets/about/luis.jpeg';
-import { DynamicHeading, DynamicParagraph } from '@my-portfolio/react-components';
+import Luis from '../../assets/about/luis.webp';
+import { DynamicParagraph } from '@my-portfolio/react-components';
 
 const AboutMeSection: React.FC = () => {
 
@@ -17,10 +17,10 @@ const AboutMeSection: React.FC = () => {
     <section id='about' className="about-me-section">
       {/* Left Side: Image */}
       <div className="about-me-left">
-        <DynamicHeading level={1} className='about-me-title'>About Me</DynamicHeading>
+        <DynamicParagraph className='about-me-title'>About Me</DynamicParagraph>
         <img
           src={Luis} 
-          alt="Your Name"
+          alt="Luis Carlos Arias Camacho"
           className="about-me-image"
         />
       </div>

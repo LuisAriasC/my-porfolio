@@ -51,7 +51,7 @@ const ProjectsSection: React.FC<{ projects: Project[] }> = ({ projects }) => {
         <div key={index} className="project-item">
           {/* Left Section: Text */}
           <div className="project-text">
-            <DynamicHeading level={2} className='project-title'>{project.title}</DynamicHeading>
+            <DynamicParagraph className='project-title'>{project.title}</DynamicParagraph>
             <DynamicParagraph className="project-description">{project.description}</DynamicParagraph>
             {
                 project.techStack.length > 0 && (

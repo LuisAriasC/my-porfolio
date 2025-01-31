@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { DynamicLayout } from '@my-portfolio/react-components';
 import { HeroSection } from '../components/HeroSection/HeroSection';
 import { Footer } from '../components/Footer/Footer';
@@ -16,6 +16,22 @@ const ContactMeSection = lazy(() => import('../components/ContactMeSection/Conta
 
 
 export const MainPage: React.FC = () => {
+
+  useEffect(() => {
+    const handlePageShow = (event: { persisted: unknown; }) => {
+      if (event.persisted) {
+        console.log("Page restored from bfcache");
+        // Restore state or rehydrate from localStorage/sessionStorage
+      }
+    };
+  
+    window.addEventListener("pageshow", handlePageShow);
+  
+    return () => {
+      window.removeEventListener("pageshow", handlePageShow);
+    };
+  }, []);
+  
   return (
     <DynamicLayout direction="column" alignItems="center" justifyContent="space-around" style={{ padding: '0px' }}>
       <TopBar />

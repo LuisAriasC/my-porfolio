@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './MyExperienceSection.scss';
-import { DynamicHeading, DynamicParagraph } from '@my-portfolio/react-components';
+import { DynamicParagraph } from '@my-portfolio/react-components';
 
 export interface Experience {
   title: string;
@@ -46,7 +46,7 @@ const MyExperienceSection: React.FC<MyExperienceSectionProps> = ({
 
   return (
     <div id="experience" className="my-experience-section" ref={sectionRef}>
-      <DynamicHeading level={2} className='my-experience-title'>My Experience</DynamicHeading>
+      <DynamicParagraph className='my-experience-title'>My Experience</DynamicParagraph>
       <div className="timeline" />
       {experiences.map((experience, index) => (
         <div
@@ -56,7 +56,7 @@ const MyExperienceSection: React.FC<MyExperienceSectionProps> = ({
           <div className="experience-content-container">
             {/* Experience Content */}
             <div className="experience-content">
-              <DynamicHeading level={2} className='experience-title'>{experience.title}</DynamicHeading>
+              <DynamicParagraph className='experience-title'>{experience.title}</DynamicParagraph>
               <DynamicParagraph className="experience-company">At {experience.company}</DynamicParagraph>
               <DynamicParagraph className="experience-description">{experience.description}</DynamicParagraph>
               <span className="experience-date">{experience.date}</span>

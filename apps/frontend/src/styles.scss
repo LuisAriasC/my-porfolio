@@ -79,6 +79,21 @@ $laptop-elements-size: 40px;
 $tablet-elements-size: 30px;
 $mobile-elements-size: 25px;
 
+$fullscreen-project-image-size: 600px;
+$laptop-project-image-size: 500px;
+$tablet-project-image-size: 400px;
+$mobile-project-image-size: 300px;
+
+$fullscreen-experience-image-size: 150px;
+$laptop-experience-image-size: 150px;
+$tablet-experience-image-size: 100px;
+$mobile-experience-image-size: 100px;
+
+$fullscreen-skill-image-size: 150px;
+$laptop-skill-image-size: 150px;
+$tablet-skill-image-size: 100px;
+$mobile-skill-image-size: 100px;
+
 $fullscreen-border-radius: 12px;
 $laptop-border-radius: 10px;
 $tablet-border-radius: 8px;
@@ -138,4 +153,8 @@ html, body {
   font-family: 'Nunito Sans', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden; 
+}
+
+textarea {
+  resize: none;
 }

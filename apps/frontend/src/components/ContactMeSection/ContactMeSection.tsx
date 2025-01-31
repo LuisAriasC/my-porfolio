@@ -37,7 +37,7 @@ const ContactMeSection: React.FC = () => {
 
   return (
     <section id='contact' className="contact-me-section">
-      <DynamicHeading level={2} className='contact-me-title'>Contact Me</DynamicHeading>
+      <DynamicParagraph className='contact-me-title'>Contact Me</DynamicParagraph>
       <DynamicParagraph className="contact-me-subtitle">Let's build something great together!</DynamicParagraph>
 
       <form className="contact-form" onSubmit={handleSubmit}>
