@@ -26,7 +26,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Apolo & Artemis',
-    description: 'I designed & builded the API with a Microservice architecture, implemented the back office project (Artemis) & helped with some features for the front office web app (Apolo).',
+    description: 'I built the API from the ground up, designing the database schema and implementing GraphQL queries and mutations within a microservices architecture. I also worked on the back-office app (Artemis), bringing designs to life and optimizing components, while contributing to key features in the front-office app (Apolo).',
     image: <img src={DeltaProject} loading="lazy" alt="Apolo & Artemis" />,
     techStack: [
       // { name: 'NestJs', component: <img src={NestJSLogo} loading="lazy" alt="NestJS" className='tech-image'/> },
@@ -39,8 +39,8 @@ export const projects: Project[] = [
     ]
   },
   {
-    title: 'iVoy WMS & API with Microservice Architecture',
-    description: 'I built the backend API & the progressive web app with React for a Warehouse Management System at iVoy and leaded the refactor from a Monolithic API to a Microservice Architecture API with GraphQL.',
+    title: 'iVoy WMS & Microservices API',
+    description: 'I built the backend API and a React-based progressive web app for a Warehouse Management System at iVoy. I also led the transition from a monolithic NestJS API to a GraphQL-based microservices architecture, improving scalability and performance.',
     image: <img src={IVoyProject} loading="lazy" alt="iVoy" />,
     techStack: [
       { name: 'NestJs', component: <img src={NestJSLogo} loading="lazy" alt="NestJS" className='tech-image'/> },
@@ -54,7 +54,7 @@ export const projects: Project[] = [
   },
   {
     title: 'JobApp',
-    description: 'Implementation of new features in the Backend with SpringBoot (Java) & implementation of the design for the FrontEnd web aplication with Angular.',
+    description: 'I developed new backend features using SpringBoot (Java) and translated UI designs into a functional Angular web application, ensuring seamless integration and performance.',
     image: <img src={JobAPpProject} loading="lazy" alt="JobApp" />,
     techStack: [
       { name: 'Spring Boot', component: <img src={SpringLogo} loading="lazy" alt="Spring" className='tech-image'/> },

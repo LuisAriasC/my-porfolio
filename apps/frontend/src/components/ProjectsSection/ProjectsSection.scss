@@ -58,7 +58,7 @@
 .project-title {
   font-size: var(--section-title-size);
   font-weight: bold;
-  margin-bottom: var(--paragraph-margin);
+  margin: 0px auto var(--paragraph-margin) auto;
   color: var(--projects-text-color);
   opacity: 0;
   transform: translateY(var(--component-margin));
@@ -71,8 +71,7 @@
   opacity: 0; /* Initially hidden */
   transform: translateY(var(--component-margin)); /* Start slightly off-screen */
   transition: opacity var(--fade-duration) ease, transform var(--fade-duration) ease;
-  margin: 0px;
-  margin-bottom: var(--paragraph-margin);
+  margin: 0px auto var(--paragraph-margin) auto;
 }
 
 .project-title.visible,
@@ -109,6 +108,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--elements-gap);
+  margin: 0 auto;
 }
 
 .tech-item {
